@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editTextPulse;
     EditText editTextAge;
-    EditText editTextDisplay;
+    EditText editTextDisplay;           // used to display the heart rates from the databas
+    // TODO: In Unit 5 will will replace the editText with a RecycleView
     Button buttonInsert;
 
     @Override
@@ -23,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
         editTextPulse = findViewById(R.id.editTextPulse);
         editTextDisplay = findViewById(R.id.editTextDisplay);
 
-        setupInsertButton();
+        setupInsertButton();            // Set up the OnClickListener for the insert button
     }
 
+    /**
+     *  Set up the Insert Heartrate button so it adds a new heart rate reading to the database
+     */
     private void setupInsertButton() {
         buttonInsert = findViewById(R.id.buttonInsert);
         buttonInsert.setOnClickListener(new View.OnClickListener() {
